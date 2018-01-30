@@ -31,7 +31,7 @@ For each node in your cluster, transfer your plugin binary and then add a system
     3. Start the systemd service with `sudo systemctl start dcos-metrics-prometheus-master`.
     4. View the system logs and verify the plugin is running with `sudo journalctl -u dcos-metrics-prometheus-plugin`.
 
-1.  On every master node:
+1.  On every agent node:
     1. Copy the agent [systemd service file](https://raw.githubusercontent.com/dcos/dcos-metrics/master/plugins/prometheus/systemd/dcos-metrics-prometheus-agent.service) to `/etc/systemd/system`.
     2. Reload the systemd state by running `sudo systemctl daemon-reload`.
     3. Start the systemd service with `sudo systemctl start dcos-metrics-prometheus-agent`.
